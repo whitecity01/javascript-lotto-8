@@ -12,6 +12,23 @@
 
 ## 시스템 사용 설명서
 
+### 실행 방법
+
+1. **프로젝트를 fork 한다.**
+
+2. **프로젝트를 clone 한다.**
+
+```bash
+git clone https://github.com/whitecity01/javascript-lotto-8.git
+```
+
+3. **아래의 명령어를 입력한다.(node.js 버전은 22.19.0 버전 이상)**
+
+```bash
+npm install
+npm run start
+```
+
 ### 입력
 
 1. **로또 구입 금액을 입력 받는다. 구입 금액은 1,000원 단위로 입력 받으며 1,000원으로 나누어 떨어지지 않는 경우 예외 처리한다.**
