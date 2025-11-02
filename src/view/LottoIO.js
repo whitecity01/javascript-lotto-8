@@ -25,6 +25,10 @@ class LottoIO {
     const bonusNumber = Number(input);
     return bonusNumber;
   }
+
+  static printErrorMessage(error) {
+    Console.print(error.message);
+  }
 }
 
 export default LottoIO;
