@@ -26,6 +26,22 @@ class LottoIO {
     return bonusNumber;
   }
 
+  static printPurchasedLottos(lottos) {
+    this.printLottosCount(lottos);
+    this.printLottosNumbers(lottos);
+  }
+
+  static printLottosCount(lottos) {
+    const lottoCount = lottos.length;
+    Console.print(`\n${lottoCount}${LOTTO_IO_MESSAGES.PURCHASED_LOTTO_COUNT}`);
+  }
+
+  static printLottosNumbers(lottos) {
+    lottos.forEach((lotto) => {
+      Console.print(`[${lotto.getNumbers().join(', ')}]`);
+    });
+  }
+
   static printErrorMessage(error) {
     Console.print(error.message);
   }

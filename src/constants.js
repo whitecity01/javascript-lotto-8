@@ -18,6 +18,7 @@ const LOTTO_IO_MESSAGES = Object.freeze({
   INPUT_PURCHASE_AMOUNT: '구입금액을 입력해 주세요.\n',
   INPUT_WINNING_NUMBERS: '\n당첨 번호를 입력해 주세요.\n',
   INPUT_BONUS_NUMBER: '\n보너스 번호를 입력해 주세요.\n',
+  PURCHASED_LOTTO_COUNT: '개를 구매했습니다.',
 });
 
 export { LOTTO_RULE, LOTTO_RULE_ERROR, LOTTO_IO_MESSAGES };

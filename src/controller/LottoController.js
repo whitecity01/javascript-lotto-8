@@ -5,6 +5,7 @@ import LottoIO from '../view/LottoIO.js';
 class LottoController {
   async run() {
     const lottos = await this.getLottos();
+    LottoIO.printPurchasedLottos(lottos);
 
     const lottoRunner = new LottoRunner();
     await this.setWinningNumbers(lottoRunner);
