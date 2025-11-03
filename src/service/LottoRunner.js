@@ -31,6 +31,10 @@ class LottoRunner {
     return this.#winningNumbers;
   }
 
+  getBonusNumber() {
+    return this.#bonusNumber;
+  }
+
   run(lottos) {
     const lottoResults = this.generateEmptyLottoResults();
     this.calculateLottoRanks(lottoResults, lottos);
