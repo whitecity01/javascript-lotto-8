@@ -11,7 +11,7 @@ class LottoController {
     await this.setWinningNumbers(lottoRunner);
     await this.setBonusNumber(lottoRunner);
     const { lottoResults, profitRate } = lottoRunner.run(lottos);
-    // todo: 출력
+    LottoIO.printLottoResults(lottoResults, profitRate);
   }
 
   async getLottos() {

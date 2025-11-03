@@ -31,6 +31,12 @@ const LOTTO_IO_MESSAGES = Object.freeze({
   INPUT_WINNING_NUMBERS: '\n당첨 번호를 입력해 주세요.\n',
   INPUT_BONUS_NUMBER: '\n보너스 번호를 입력해 주세요.\n',
   PURCHASED_LOTTO_COUNT: '개를 구매했습니다.',
+  RESULT_STATISTICS_TITLE: '\n당첨 통계',
+  RESULT_DIVIDER: '---',
+  RESULT_MATCHED_COUNT: '개 일치',
+  RESULT_BONUS_MATCHED: ', 보너스 볼 일치',
+  RESULT_PROFIT_RATE_PREFIX: '총 수익률은 ',
+  RESULT_PROFIT_RATE_POSTFIX: '%입니다.',
 });
 
 export {
