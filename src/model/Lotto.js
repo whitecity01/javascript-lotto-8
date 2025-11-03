@@ -9,9 +9,22 @@ class Lotto {
   }
 
   #validate(numbers) {
+    this.#validateIsNumbersType(numbers);
     this.#validateNumbersLength(numbers);
     this.#validateNumbersRange(numbers);
     this.#validateDuplication(numbers);
+  }
+
+  #validateIsNumbersType(numbers) {
+    for (const number of numbers) {
+      this.#validateIsNumberType(number);
+    }
+  }
+
+  #validateIsNumberType(number) {
+    if (!Number.isInteger(number)) {
+      throw new Error(LOTTO_RULE_ERROR.INVALID_NUMBER_RANGE);
+    }
   }
 
   #validateNumbersLength(numbers) {
