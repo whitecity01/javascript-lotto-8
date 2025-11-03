@@ -6,11 +6,9 @@ import {
 import LottoRunnerValidator from './validator/LottoRunnerValidator.js';
 
 class LottoRunner {
-  #numbersList;
   #winningNumbers;
   #bonusNumber;
   constructor() {
-    this.#numbersList = [];
     this.#winningNumbers = [];
     this.#bonusNumber = null;
   }
@@ -95,7 +93,7 @@ class LottoRunner {
   calculateProfitRate(lottoResults, totalLottosCount) {
     const totalPrize = this.calculateTotalPrize(lottoResults);
     const totalPurchaseAmount = totalLottosCount * LOTTO_RULE.PRICE;
-    const profitRate = Math.round((totalPrize / totalPurchaseAmount) * 100);
+    const profitRate = (totalPrize / totalPurchaseAmount) * 100;
     return Number(profitRate).toFixed(LOTTO_PROFIT_RATE_RULE.DECIMAL_SCALE);
   }
 
