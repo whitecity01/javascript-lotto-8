@@ -2,6 +2,7 @@ import { LOTTO_RULE, LOTTO_RULE_ERROR } from '../../constants.js';
 
 class LottoRunnerValidator {
   static validateWinningNumbers(winningNumbers) {
+    this.validateIsNumbersType(winningNumbers);
     this.validateNumbersLength(winningNumbers);
     this.validateIsNotNumbers(winningNumbers);
     this.validateNumbersInRange(winningNumbers);
@@ -9,9 +10,22 @@ class LottoRunnerValidator {
   }
 
   static validateBonusNumber(winningNumbers, bonusNumber) {
+    this.validateIsNumberType(bonusNumber);
     this.validateIsNotNumber(bonusNumber);
     this.validateNumberInRange(bonusNumber);
     this.validateIsMatchedWinningNumbers(winningNumbers, bonusNumber);
+  }
+
+  static validateIsNumbersType(numbers) {
+    for (const number of numbers) {
+      this.validateIsNumberType(number);
+    }
+  }
+
+  static validateIsNumberType(number) {
+    if (!Number.isInteger(number)) {
+      throw new Error(LOTTO_RULE_ERROR.INVALID_NUMBER_RANGE);
+    }
   }
 
   static validateNumbersLength(numbers) {
